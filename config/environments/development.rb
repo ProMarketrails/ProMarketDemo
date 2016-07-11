@@ -1,4 +1,4 @@
-Rails.application.configure do
+ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -26,6 +26,9 @@ Rails.application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+  
+  #Require for Devise gem
+   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   # Asset digests allow you to set far-future HTTP expiration dates on all assets,
   # yet still be able to expire them through the digest params.
